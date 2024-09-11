@@ -1,6 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-function Score({ totalQuestions, score, setIndex }) {
+interface ScoreProps {
+    totalQuestions: number;
+    score: number;
+    setIndex: (index: number) => void;
+}
+
+const Score: React.FC<ScoreProps> = ({ totalQuestions, score, setIndex }) => {
     return (
         <>
             <div className="score_results">
@@ -17,7 +23,7 @@ function Score({ totalQuestions, score, setIndex }) {
                 </button>
             </div>
         </>
-    )
+    );
 }
 
-export default Score
+export default Score;
